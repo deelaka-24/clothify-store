@@ -29,7 +29,6 @@ public class LogInFormController {
 
     @FXML
     void btnLogInOnAction(ActionEvent event) {
-        // Load the new stage (window)
         Stage newStage = new Stage();
         try {
             newStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dash-board-form.fxml"))));
@@ -38,14 +37,12 @@ public class LogInFormController {
         }
         newStage.show();
 
-        // Close the current window (stage)
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.close();
     }
 
     @FXML
     void lblForgotPasswordOnAction(MouseEvent event) {
-        // Load the new stage (window)
         Stage newStage = new Stage();
         try {
             newStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/forgot-password-form.fxml"))));
@@ -54,7 +51,6 @@ public class LogInFormController {
         }
         newStage.show();
 
-        // Close the current window (stage)
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.close();
     }

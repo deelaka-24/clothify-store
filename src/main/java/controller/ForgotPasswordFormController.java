@@ -23,7 +23,6 @@ public class ForgotPasswordFormController {
 
     @FXML
     void btnBackOnAction(ActionEvent event) {
-        // Load the new stage (window)
         Stage newStage = new Stage();
         try {
             newStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/log-in-form.fxml"))));
@@ -32,8 +31,6 @@ public class ForgotPasswordFormController {
         }
         newStage.show();
 
-        // Close the current window (stage)
-        // Assuming event was fired from a control in the current window
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.close();
     }

@@ -67,15 +67,15 @@ public class DashBoardFormController implements Initializable {
 
     // Method to load FXML forms
     private void loadForm(String formPath) throws IOException {
-        URL resource = this.getClass().getResource("/" + formPath); // Ensure the leading slash
+        URL resource = this.getClass().getResource("/" + formPath);
 
         if (resource == null) {
-            throw new IOException("FXML file not found: " + formPath); // Throw an exception if resource is null
+            throw new IOException("FXML file not found: " + formPath);
         }
 
         Parent load = FXMLLoader.load(resource);
-        this.contentAnchorPane.getChildren().clear(); // Clear current content
-        this.contentAnchorPane.getChildren().add(load); // Add new content
+        this.contentAnchorPane.getChildren().clear();
+        this.contentAnchorPane.getChildren().add(load);
     }
 
 //
